@@ -1,0 +1,241 @@
+/*
+
+PRINCIPAIS BREAKPOINTS
+
+320px - 480px: dispositivos móveis
+481px - 768px: ipads, tablets
+769px - 1024px: telas pequenas, leptops
+1025px - 1200px: desktops, telas grandes (widescreen)
+1201px e a cima: telas enormes (tv's)
+
+*/
+
+/*Desktop*/
+@media screen and (max-width:1200px) {
+    html,body{
+        overflow-x: hidden;
+    }
+
+/*Locais que deram problema no site, que precisaram de alteração*/
+
+     /*specialties*/
+    .specialtiesI ul {
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .specialtiesI ul li {
+         flex: 1 1 3000px;
+        min-width: 300px;
+        max-width: 300px;
+        padding: 50px 20px;
+    }
+
+    /*products*/
+    .productsC {
+        width: 100%;
+        height: auto;
+        text-align: center;
+        background-image: url('../img/img6.png');
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+        padding: 10em 0;
+    }
+
+    .productsI {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        position: relative;
+        margin-top: 30px;
+        width: 90%;
+        margin: 50px auto;
+    }
+    
+    .productsCard {
+        flex: 1 1 250px;
+        min-width: 250px;
+        max-width: 250px;
+        margin: 10px;
+    }
+
+}
+
+/*Laptop*/
+@media screen and (max-width:1024px) {
+    html,body{
+        overflow-x: hidden;
+    }
+    /*Menu*/
+    .menuItens li a {
+        line-height: 70px;
+        height: 70px;
+        padding: 25px 10px;
+        color: aliceblue;  
+        text-transform: uppercase;
+        font-size: 16px;
+    }
+}
+
+
+/*Tablet*/
+@media screen and (max-width:768px) {
+    html,body{
+        overflow-x: hidden;
+    }
+
+    /*navegação*/
+    .menuC {
+        width: 100%;
+        height: 70px;
+        background-color: #333;
+        position: fixed;
+        box-shadow: 1px 2px 5px #333;
+        transition: all .5s;
+        z-index: 99;
+    }
+
+    .menuC button {
+        display: block;
+        height: 50px;
+        background-color: transparent;
+        border: none;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+        z-index: 100;
+    }
+
+    .menuC button img{
+    height: 50px
+    }
+    
+    /*faz baixar o menu*/
+    .menuC button:focus~.menuItens {
+        height: 400px;
+    }
+
+    .menuItens {
+        background-color: #333;
+        position: absolute;
+        height: 0;
+        width: 100%;
+        display: block;
+        top: 0;
+        transition: all .5s;
+        margin-top: 70px;
+        overflow: hidden;
+    }
+
+    .menuItens li {
+        line-height: 40px;
+        height: 40px;
+    }
+
+    .menuItens li a {
+        font-size: 14px;
+        line-height: 14px;
+        height: 14px;
+    }
+
+    .menuItens li a :hover {
+        padding: 10px 5px;
+    }
+}
+
+
+/*Mobile*/
+@media screen and (max-width:480px) {
+    html,body{
+        overflow-x: hidden;
+}
+    /*Home*/
+    .homeC{
+        background-image: url('../img/img3.png');
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+        padding: 10em 2em;
+        text-align: center;
+    
+    }
+    /*Services*/
+    .servicesC table td{
+        padding: 10px 5px;
+    }
+
+    .servicesC table td a{
+        padding: 5px !important;
+        margin: 0 !important;
+    }
+
+    /*contact*/
+    .contactI{
+        width: 90%;
+        position: relative;
+        margin: 0 auto;
+        text-align: center;
+        padding: 2em 0;
+    }
+
+    .contactI input, .contactI textarea{
+        width: 300px;
+        padding: 20px;
+        font-size: 16px;
+        border-radius: 5px;
+        border: 1px solid #333;
+        margin-top: 30px;  
+    }
+
+    /*footer*/
+    .footerC{
+        background-color: #333;
+        color: aliceblue;
+        text-align: center;
+        padding: 2em
+    }
+           
+}
+
+/*Mobile Small*/
+@media screen and (max-width:320px) {
+    html,body{
+        overflow-x: hidden;
+    }
+
+    /*Services*/
+    .servicesItens table th, .servicesItens table td{
+        font-size: 14px;
+    }
+    /*contact*/
+    .contactC{
+        text-align: center;
+        padding: 2em 1em;
+    }
+
+    .contactI{
+        width: 90%;
+        position: relative;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .contactI input, .contactI textarea{
+        width: 200px;
+        padding: 20px;
+        font-size: 16px;
+        border-radius: 5px;
+        border: 1px solid #333;
+        margin-top: 30px;  
+    }
+ 
+}
